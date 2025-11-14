@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘绘画师 - Keyboard Artist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 开场动画 -->
+    <div id="intro-overlay" class="intro-overlay">
+        <h1 class="intro-title">🎨 键盘绘画师</h1>
+        <p class="intro-subtitle">通过键盘创造独特的数字艺术体验</p>
+        
+        <div class="intro-features">
+            <div class="feature">
+                <div class="feature-icon">⌨️</div>
+                <div class="feature-text">敲击键盘创建艺术元素</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <div class="feature-text">多种形状和动画效果</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-text">点击元素可删除</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔧</div>
+                <div class="feature-text">按C键显示名字</div>
+            </div>
+        </div>
+        
+        <button id="start-button" class="start-button">开始创作</button>
+    </div>
+
+    <!-- 主画布 -->
+    <div id="canvas" class="canvas">
+        <div class="hint">
+            <h1>🎨 键盘绘画师</h1>
+            <p>开始敲击键盘，创作你的艺术</p>
+            <p class="controls desktop-hint">
+                按 <kbd>ESC</kbd> 清空画布 | 
+                按 <kbd>C</kbd> 显示名字 |
+                点击元素可删除
+            </p>
+            <p class="controls mobile-hint">
+                点击屏幕创建随机元素 | 
+                点击元素可删除 | 
+                双指点击清空画布
+            </p>
+        </div>
+        <div id="art-container" class="art-container"></div>
+    </div>
+    
+    <!-- 统计信息 -->
+    <div class="stats">
+        <span>元素数量: <span id="element-count">0</span></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
